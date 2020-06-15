@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./style.css"
+// import Form from "./components/Form/Form";
 
 class Table extends Component {
     state = {
@@ -8,6 +9,7 @@ class Table extends Component {
     };
 
     render() {
+        
         return (
             <div>
                 <table className="table">
