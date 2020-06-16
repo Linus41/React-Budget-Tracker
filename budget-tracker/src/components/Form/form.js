@@ -21,20 +21,20 @@ class Form extends Component {
     });
 
   };
+  //should this function be responsible for sending the input somewhere?
+  // handleFormSubmit = event => {
+  //   // Preventing the default behavior of the form submit (which is to refresh the page)
+  //   event.preventDefault();
+  //   if (!this.state.budgetItem || !this.state.itemExpense) {
+  //     alert("Please enter an item and its cost");
+  //   }
 
-  handleFormSubmit = event => {
-    // Preventing the default behavior of the form submit (which is to refresh the page)
-    event.preventDefault();
-    if (!this.state.budgetItem || !this.state.itemExpense) {
-      alert("Please enter an item and its cost");
-    }
+  //   this.setState({
+  //     budgetItem: "",
+  //     itemExpense: ""
 
-    this.setState({
-      budgetItem: "",
-      itemExpense: ""
-
-    });
-  };
+  //   });
+  // };
 
   render() {
     // Notice how each input has a `value`, `name`, and `onChange` prop

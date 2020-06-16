@@ -4,10 +4,9 @@ import Table from "./components/Table/Table";
 // import Total from "./components/Total/Total";
 
 class App extends Component {
-  
+
   state = {
     budgetItem: [],
-    itemExpense: []
   }
 
   handleInputChange = (event) => {
@@ -16,20 +15,21 @@ class App extends Component {
       ...this.state,
       [event.target.id]: value
     });
+
   };
-  
+
   handleFormSubmit = (event) => {
     event.preventDefault();
 
     let items = [...this.state.budgetItem];
-    let expense = [...this.state.itemExpense];
+    
 
     items.push({
       budgetItem: this.state.budgetItem
     });
 
-    expense.push({
-      itemExpense: this.state.itemExpense
+    this.setState({
+      items
     })
 
     // this.setState({
@@ -38,15 +38,18 @@ class App extends Component {
     // });
   };
 
-  
+
 
   render() {
-  return (
-    <div><Form />
-    <Table/>
-    {/* <Total /> */}
-    </div>
-  );
+    //need a const for array here?
+    const budgetArray = this.state.budgetItem
+    return (
+      <div>
+        <Form />
+        <Table budgetItem={budgetArray} />
+        {/* <Total /> */}
+      </div>
+    );
   }
 }
 
