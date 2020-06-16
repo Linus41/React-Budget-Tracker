@@ -6,6 +6,7 @@ class Form extends Component {
   state = {
     budgetItem: "",
     itemExpense: "",
+    allBudgetInfo: []
   };
   
 
@@ -13,7 +14,7 @@ class Form extends Component {
     // Getting the value and name of the input which triggered the change
     let value = event.target.value;
     const name = event.target.name;
-
+    console.log(name, value)
 
     // Updating the input's state
     this.setState({
@@ -21,20 +22,20 @@ class Form extends Component {
     });
 
   };
-  //should this function be responsible for sending the input somewhere?
-  // handleFormSubmit = event => {
-  //   // Preventing the default behavior of the form submit (which is to refresh the page)
-  //   event.preventDefault();
-  //   if (!this.state.budgetItem || !this.state.itemExpense) {
-  //     alert("Please enter an item and its cost");
-  //   }
-
-  //   this.setState({
-  //     budgetItem: "",
-  //     itemExpense: ""
-
-  //   });
-  // };
+  //this function takes the current state of budgetItem and itemExpense and pushes into allBudgetInfo array on click of submit button
+  handleFormSubmit = event => {
+    // Preventing the default behavior of the form submit (which is to refresh the page)
+    event.preventDefault();
+    // console.log(this.state.budgetItem, this.state.itemExpense)
+    console.log(this.state.allBudgetInfo)
+    
+    // this.state.allBudgetInfo = list;
+    // console.log("list", list)
+    this.setState({allBudgetInfo: this.state.allBudgetInfo.concat({[this.state.budgetItem]:parseFloat(this.state.itemExpense)})})
+    
+    
+    
+  };
 
   render() {
     // Notice how each input has a `value`, `name`, and `onChange` prop
