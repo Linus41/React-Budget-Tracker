@@ -4,8 +4,8 @@ import "./style.css"
 
 class Table extends Component {
     state = {
-        budgetItem: "",
-        itemExpense: ""
+        budgetItem: [],
+        itemExpense: []
     };
 
     render() {
@@ -18,8 +18,8 @@ class Table extends Component {
                         <th>Expense Amount</th>
                     </tr>
                     <tr>
-                        <td>{this.state.itemExpense}</td>
-                        <td>Hello</td>
+                        <td>{this.props.budgetItem}</td>
+                        <td>{this.props.itemExpense}</td>
                     </tr>
                 </table>
             </div>

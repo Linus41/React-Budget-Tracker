@@ -7,17 +7,19 @@ class Form extends Component {
     budgetItem: "",
     itemExpense: "",
   };
+  
 
   handleInputChange = event => {
     // Getting the value and name of the input which triggered the change
     let value = event.target.value;
     const name = event.target.name;
 
-    
+
     // Updating the input's state
     this.setState({
       [name]: value
     });
+
   };
 
   handleFormSubmit = event => {
@@ -25,12 +27,12 @@ class Form extends Component {
     event.preventDefault();
     if (!this.state.budgetItem || !this.state.itemExpense) {
       alert("Please enter an item and its cost");
-    } 
+    }
 
     this.setState({
       budgetItem: "",
       itemExpense: ""
-    
+
     });
   };
 

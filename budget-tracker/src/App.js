@@ -10,9 +10,16 @@ class App extends Component {
     itemExpense: []
   }
 
+  handleInputChange = (event) => {
+    const value = event.target.value;
+    this.setState({
+      ...this.state,
+      [event.target.id]: value
+    });
+  };
   
-  handleFormSubmit = (e) => {
-    e.preventDefault();
+  handleFormSubmit = (event) => {
+    event.preventDefault();
 
     let items = [...this.state.budgetItem];
     let expense = [...this.state.itemExpense];
@@ -25,25 +32,18 @@ class App extends Component {
       itemExpense: this.state.itemExpense
     })
 
-    this.setState({
-      budgetItem: "",
-      itemExpense: ""
-    });
+    // this.setState({
+    //   budgetItem: "",
+    //   itemExpense: ""
+    // });
   };
 
-  handleInputChange = (e) => {
-    let name = e.target.name;
-    let value = e.target.value;
-
-    this.setState({
-      [name]: value
-    })
-  };
+  
 
   render() {
   return (
     <div><Form />
-    <Table />
+    <Table/>
     {/* <Total /> */}
     </div>
   );
