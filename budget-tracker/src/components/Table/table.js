@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import "./style.css"
-// import Form from "./components/Form/Form";
+
 
 class Table extends Component {
     state = {
-        budgetItem: [],
-        itemExpense: []
+        budgetItem: "",
+        itemExpense: ""
     };
 
     render() {
@@ -21,10 +21,11 @@ class Table extends Component {
                     </thead>
                     <tbody>
                          {/* use map to loop through all expenses  */}
+
                         <tr>
                            
+                            <td>{this.props.budgetItem}</td>
                             <td></td>
-                            <td>hello</td>
                         </tr>
                     </tbody>
                 </table>

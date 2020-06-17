@@ -6,46 +6,21 @@ import Table from "./components/Table/Table";
 class App extends Component {
 
   state = {
-    budgetItem: [],
+    budgetItems: [],
   }
 
-  handleInputChange = (event) => {
-    const value = event.target.value;
-    this.setState({
-      ...this.state,
-      [event.target.id]: value
-    });
-
-  };
-
-  handleFormSubmit = (event) => {
-    event.preventDefault();
-
-    let items = [...this.state.budgetItem];
-    
-
-    items.push({
-      budgetItem: this.state.budgetItem
-    });
-
-    this.setState({
-      items
-    })
-
-    // this.setState({
-    //   budgetItem: "",
-    //   itemExpense: ""
-    // });
-  };
-
-
+  addBudgetItem = item => {
+    this.setState({budgetItems: [...this.state.budgetItems, item]})
+    console.log(this.state.budgetItems);
+  }
 
   render() {
     //need a const for array here?
-    const budgetArray = this.state.budgetItem
+    const budgetArray = this.state.budgetItems
     return (
       <div>
-        <Form />
+        {/* this addBudgetItem could be called anything, as long as it is called the same thing in form.js as props; this.addBudgetItem refers to the addBudgetItem method on line 12 in this file */}
+        <Form addBudgetItem={this.addBudgetItem}/>
         <Table budgetItem={budgetArray} />
         {/* <Total /> */}
       </div>

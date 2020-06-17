@@ -8,13 +8,13 @@ class Form extends Component {
     itemExpense: "",
     allBudgetInfo: []
   };
-  
+
 
   handleInputChange = event => {
     // Getting the value and name of the input which triggered the change
     let value = event.target.value;
     const name = event.target.name;
-    console.log(name, value)
+    // console.log(name, value)
 
     // Updating the input's state
     this.setState({
@@ -26,15 +26,10 @@ class Form extends Component {
   handleFormSubmit = event => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
-    // console.log(this.state.budgetItem, this.state.itemExpense)
-    console.log(this.state.allBudgetInfo)
+    //props here allows this file to access the addBudgetItem method from App.js
     
-    // this.state.allBudgetInfo = list;
-    // console.log("list", list)
-    this.setState({allBudgetInfo: this.state.allBudgetInfo.concat({[this.state.budgetItem]:parseFloat(this.state.itemExpense)})})
-    
-    
-    
+    this.props.addBudgetItem({budgetItem: this.state.budgetItem, itemExpense: this.state.itemExpense})
+
   };
 
   render() {
