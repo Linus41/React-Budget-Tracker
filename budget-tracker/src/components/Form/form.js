@@ -2,11 +2,10 @@ import React, { Component } from "react";
 import "./style.css";
 
 class Form extends Component {
-  // Setting the component's initial state
+  // this state does nothing, doesn't need to be here
   state = {
     budgetItem: "",
     itemExpense: "",
-    allBudgetInfo: []
   };
 
 
@@ -27,9 +26,12 @@ class Form extends Component {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
     //props here allows this file to access the addBudgetItem method from App.js
-    
-    this.props.addBudgetItem({budgetItem: this.state.budgetItem, itemExpense: this.state.itemExpense})
 
+    this.props.addBudgetItem({ budgetItem: this.state.budgetItem, itemExpense: this.state.itemExpense })
+    this.setState({
+      budgetItem: "",
+      itemExpense: ""
+    })
   };
 
   render() {

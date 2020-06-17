@@ -11,27 +11,24 @@ class Table extends Component {
     render() {
         return (
             < div >
-            <table className>
-                <thead className="bg-dark text-light">
-                    <tr>
-                        <th>Budget Item</th>
-                        <th>Expense Amount</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {/* use map to loop through all expenses  */}
-                    {this.props.budgetItem.map(budget => (
-                       <tr>
-                           <td>{budget.budgetItem}</td>
-                           <td>{budget.itemExpense}</td>
-                       </tr>
-                        
-                    ))}
-                    
-                </tbody>
-            </table>
-    </div >
-);
+                <table className>
+                    <thead className="bg-dark text-light">
+                        <tr>
+                            <th>Budget Item</th>
+                            <th>Expense Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {this.props.budgetItem.map(budget => (
+                            <tr>
+                                <td>{budget.budgetItem}</td>
+                                <td>{budget.itemExpense}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div >
+        );
     }
 }
 
