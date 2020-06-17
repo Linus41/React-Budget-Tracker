@@ -16,12 +16,12 @@ class App extends Component {
 
   render() {
     //need a const for array here?
-    const budgetArray = this.state.budgetItems
+    // const budgetArray = this.state.budgetItems
     return (
       <div>
         {/* this addBudgetItem could be called anything, as long as it is called the same thing in form.js as props; this.addBudgetItem refers to the addBudgetItem method on line 12 in this file */}
         <Form addBudgetItem={this.addBudgetItem}/>
-        <Table budgetItem={budgetArray} />
+        <Table budgetItem={this.state.budgetItems} />
         {/* <Total /> */}
       </div>
     );
