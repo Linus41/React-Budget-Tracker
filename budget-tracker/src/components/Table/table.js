@@ -4,7 +4,8 @@ import "./style.css"
 
 class Table extends Component {
     state = {
-        budgetItem: ""
+        budgetItem: "",
+        itemExpense: ""
     }
 
     render() {
@@ -20,13 +21,13 @@ class Table extends Component {
                 <tbody>
                     {/* use map to loop through all expenses  */}
                     {this.props.budgetItem.map(budget => (
-                        this.state.budgetItem = { allBudgetInfo }
+                       <tr>
+                           <td>{budget.budgetItem}</td>
+                           <td>{budget.itemExpense}</td>
+                       </tr>
+                        
                     ))}
-                    <tr>
-
-                        <td></td>
-                        <td></td>
-                    </tr>
+                    
                 </tbody>
             </table>
     </div >
