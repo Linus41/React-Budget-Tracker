@@ -37,8 +37,8 @@ class Form extends Component {
   render() {
     // Notice how each input has a `value`, `name`, and `onChange` prop
     return (
-      <div>
-        <p>
+      <div className="form">
+        <p className="heading">
           Welcome to Budget Tracker!
         </p>
         <form>

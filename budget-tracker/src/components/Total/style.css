@@ -1,0 +1,15 @@
+.total {
+    margin: 20px;
+    border: solid black 2px;
+    width: 200px;
+    height: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+#numbers {
+    font-size: 24px;
+    text-align: center;
+}

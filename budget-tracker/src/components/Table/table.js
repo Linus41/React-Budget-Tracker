@@ -11,7 +11,7 @@ class Table extends Component {
     render() {
         return (
             < div >
-                <table className>
+                <table className="table">
                     <thead className="bg-dark text-light">
                         <tr>
                             <th>Budget Item</th>
@@ -22,7 +22,7 @@ class Table extends Component {
                         {this.props.budgetItem.map(budget => (
                             <tr>
                                 <td>{budget.budgetItem}</td>
-                                <td>{budget.itemExpense}</td>
+                                <td>${budget.itemExpense}</td>
                             </tr>
                         ))}
                     </tbody>
