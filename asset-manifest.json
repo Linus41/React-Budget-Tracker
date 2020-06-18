@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/React-Budget-Tracker/static/css/main.d5b1e270.chunk.css",
+    "main.js": "/React-Budget-Tracker/static/js/main.91bfafcb.chunk.js",
+    "main.js.map": "/React-Budget-Tracker/static/js/main.91bfafcb.chunk.js.map",
+    "runtime-main.js": "/React-Budget-Tracker/static/js/runtime-main.e2a002b2.js",
+    "runtime-main.js.map": "/React-Budget-Tracker/static/js/runtime-main.e2a002b2.js.map",
+    "static/js/2.f353d284.chunk.js": "/React-Budget-Tracker/static/js/2.f353d284.chunk.js",
+    "static/js/2.f353d284.chunk.js.map": "/React-Budget-Tracker/static/js/2.f353d284.chunk.js.map",
+    "index.html": "/React-Budget-Tracker/index.html",
+    "precache-manifest.ed987f4d2376d2e7f1578600b2b67b98.js": "/React-Budget-Tracker/precache-manifest.ed987f4d2376d2e7f1578600b2b67b98.js",
+    "service-worker.js": "/React-Budget-Tracker/service-worker.js",
+    "static/css/main.d5b1e270.chunk.css.map": "/React-Budget-Tracker/static/css/main.d5b1e270.chunk.css.map",
+    "static/js/2.f353d284.chunk.js.LICENSE.txt": "/React-Budget-Tracker/static/js/2.f353d284.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e2a002b2.js",
+    "static/js/2.f353d284.chunk.js",
+    "static/css/main.d5b1e270.chunk.css",
+    "static/js/main.91bfafcb.chunk.js"
+  ]
+}
