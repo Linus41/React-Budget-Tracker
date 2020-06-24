@@ -7,6 +7,7 @@ class Total extends Component {
         updatedExpense: ""
     }
 
+    
     // handleInputChange = () => {
     //     //use props to access budgetItem from App, which is an array of objects
     //     //then pull itemExpense out of it using map
@@ -19,15 +20,17 @@ class Total extends Component {
     // }
 
     render() {
+        let total = 0;
+        (this.props.budgetItem.forEach(budget => {
+            total = total + parseFloat(budget.itemExpense)
+        }))
+
         return (
             <div className="total">
-                <h1>Total</h1>
-                {this.props.budgetItem.map(budget => (
-                    <div>
-                        {this.handleInputChange}
-                        <p id="numbers">${budget.itemExpense}</p>
-                    </div>
-                ))}
+                <h1>${total}</h1>
+        
+                   
+                
             </div>
 
         )
